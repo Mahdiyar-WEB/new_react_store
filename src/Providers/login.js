@@ -10,7 +10,6 @@ const login = (email, password) => {
     emails.length < allUsers.length &&
     passwords.length === allUsers.length
   ) {
-    alert("password incorect");
     return { error: true, info: "رمز عبور اشتباه است" };
   } else {
     const user = allUsers.find((user) => user.email === email);

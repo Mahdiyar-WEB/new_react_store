@@ -1,3 +1,4 @@
+import React from 'react'
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -5,7 +6,7 @@ import { ToastProvider } from "react-toast-notifications";
 const root = createRoot(document.getElementById("root"));
 
 root.render(
-  <ToastProvider
+    <ToastProvider
     placement="top-left"
     autoDismiss={true}
     autoDismissTimeout={3000}

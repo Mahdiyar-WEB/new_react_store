@@ -16,17 +16,16 @@ const CartSummary = ({ store }) => {
   return (
     <div className={styles.container}>
       <div className={styles.detailsContainer}>
-        <span>قیمت کالاها:</span>
-        <span>{totalPrices} ت</span>
+        <span>قیمت کالاها({store.products.length}) :</span>
+        <span>{totalPrices} هزارتومان</span>
       </div>
       <div className={styles.detailsContainer}>
-        <span>تخفیف کالاها:</span>
-        <span>{totalDiscounts} ت</span>
+        <span>جمع کل سبد خرید :</span>
+        <span>{store.totalPrice} هزارتومان</span>
       </div>
-      <hr style={{ backgroundColor: "#ccc " }} />
-      <div className={styles.detailsContainer}>
-        <span>جمع کل سبد خرید:</span>
-        <span>{store.totalPrice} ت</span>
+      <div className={`${styles.detailsContainer} ${styles.off}`}>
+        <span>سود شما از خرید</span>
+        <span>{totalDiscounts} هزارتومان</span>
       </div>
       <Link
         to={auth ? "" : { pathname: "/login", search: "redirect=cart" }}
@@ -37,8 +36,12 @@ const CartSummary = ({ store }) => {
           }
         }}
       >
-        پرداخت
+ادامه
       </Link>
+      <p className={styles.score}>
+        <span>{Math.floor(store.totalPrice/20)}  امتیاز</span>
+        <span>امتیاز شما از این خرید</span>
+      </p>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import {
   useEffect,
 } from "react";
 import storeReducer from "./storeReducer";
-
 const ProductContext = createContext();
 const ProductContextDispatcher = createContext();
 const AuthContext = createContext();

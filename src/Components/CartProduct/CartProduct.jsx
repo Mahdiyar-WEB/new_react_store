@@ -32,14 +32,14 @@ const CartProduct = ({ product, onIncrease, onDecrease }) => {
             </div>
             <div>
               {product.discount > 0 && (
-                <p className={styles.price}>{product.price}هزار تومان</p>
+                <p className={styles.price}>{product.price / product.quantity}هزار تومان</p>
               )}
               <p
                 className={`${styles.offPrice} ${
                   product.discount === 0 && styles.justOffPrice
                 }`}
               >
-                {product.offPrice}هزار تومان
+                {product.offPrice / product.quantity}هزار تومان
               </p>
             </div>
           </div>

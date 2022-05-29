@@ -1,5 +1,6 @@
 import CartProduct from "../../Components/CartProduct/CartProduct";
 import styles from "./cart.module.css";
+import React from "react";
 import {
   useProducts,
   useProductsActions,
@@ -55,4 +56,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default React.memo(Cart);

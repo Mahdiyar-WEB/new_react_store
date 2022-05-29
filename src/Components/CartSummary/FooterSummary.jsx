@@ -12,7 +12,7 @@ const FooterSummary = ({ totalPrice }) => {
         <small className={styles.subPrice}>جمع سبد خرید</small>
         <p style={{ direction: "rtl" }}>
           {totalPrice}
-          <span style={{ marginRight: "5px", fontSize: "14px" }}>تومان</span>
+          <span style={{ marginRight: "5px", fontSize: "14px" }}>هزارتومان</span>
         </p>
       </div>
       <Link

@@ -1,8 +1,11 @@
 import _ from "lodash";
 
+let allProducts = [];
+
 const storeReducer = (state, action) => {
   switch (action.type) {
     case "addProduct": {
+      console.log(state.products);
       const cloneProducts = [...state.products];
       const index = cloneProducts.findIndex(
         (product) => product.id === action.value.id
@@ -40,6 +43,7 @@ const storeReducer = (state, action) => {
           "products",
           JSON.stringify({ ...state, products: updatedProducts })
         );
+        allProducts = cloneProducts;
         return { ...state, products: updatedProducts };
       } else {
         defindedProduct.price -= action.value.price / action.value.quantity;
@@ -50,6 +54,7 @@ const storeReducer = (state, action) => {
           "products",
           JSON.stringify({ ...state, products: cloneProducts })
         );
+        allProducts = cloneProducts;
         return { ...state, products: cloneProducts };
       }
     }
@@ -67,7 +72,6 @@ const storeReducer = (state, action) => {
       const value = action.value || "";
       return { products: value.products, totalPrice: value.totalPrice };
     }
- 
     default:
       return state;
   }

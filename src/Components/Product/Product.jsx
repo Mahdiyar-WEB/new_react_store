@@ -1,15 +1,15 @@
 import styles from "./product.module.css";
 import { useNavigate } from "react-router-dom";
 
-const Product = ({ product, onAdd, inCart }) => {
+const Product = ({ product, onAdd, inCart,onClick }) => {
   const navigate = useNavigate();
   const redirect = () => {
     navigate("cart");
   };
   return (
-    <div className={styles.product}>
-      <img src={product.image} alt={product.name} />
-      <div className={styles.head}>
+    <div  className={styles.product}>
+      <img onClick={onClick} src={product.image} alt={product.name} />
+      <div onClick={onClick} className={styles.head}>
         <p>{product.name}</p>
         <p className={product.discount > 0 ? styles.discount_price : ""}>
           ت {product.price}

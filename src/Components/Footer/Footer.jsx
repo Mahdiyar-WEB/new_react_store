@@ -1,9 +1,9 @@
 import { BsInstagram, BsTelegram, BsGithub, BsLinkedin } from "react-icons/bs";
 import styles from "./footer.module.css";
 
-const Footer = () => {
+const Footer = ({product}) => {
   return (
-    <footer className={styles.container}>
+    <footer className={`${styles.container} ${product && styles.footer}`}>
       <h1>Mahdiyar-WEB</h1>
       <div className={styles.linkContainer}>
         <a href="https://t.me/mahdiyarMN">

@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./navigation.module.css";
 import { useProducts } from "../../../Providers/StoreProvider/StoreProvider";
-import { FaShoppingCart } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 import { useAuth } from "../../../Providers/StoreProvider/StoreProvider";
 
 const Navigation = () => {
@@ -25,14 +25,12 @@ const Navigation = () => {
         </ul>
         <ul className={styles.link_container}>
           <li className={styles.cart}>
-            <NavLink
-              className={(navData) =>
-                navData.isActive ? styles.active_link : styles.unactive_link
-              }
+            <Link
+              
               to="/cart"
             >
-              <FaShoppingCart />
-            </NavLink>
+              <FiShoppingCart />
+            </Link>
             <span
               className={`${styles.numOfProducts} ${
                 products.length === 0 && styles.none_products
