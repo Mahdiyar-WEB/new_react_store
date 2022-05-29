@@ -1,13 +1,19 @@
 import styles from "./cartProduct.module.css";
 import { BiTrash } from "react-icons/bi";
+import {useNavigate} from 'react-router-dom';
 
 const CartProduct = ({ product, onIncrease, onDecrease }) => {
+  const navigate = useNavigate();
+  const navigateHandler = (productName)=>{
+    const name = productName.toLowerCase().split(" ").join("-");
+    navigate(`/product/${name}`);
+  }
   return (
     <div className={styles.container}>
       <div className={styles.details}>
         <div className={styles.details_header}>
           <p className={styles.discount}>{product.discount}%</p>
-          <h4>{product.name}</h4>
+          <h4 onClick={()=> navigateHandler(product.name)}>{product.name}</h4>
         </div>
         <div className={styles.middle_details}>
           <div className={styles.futures_container}>
@@ -46,7 +52,7 @@ const CartProduct = ({ product, onIncrease, onDecrease }) => {
         </div>
         <div className={styles.footer_details}></div>
       </div>
-      <div className={styles.image_container}>
+      <div onClick={()=> navigateHandler(product.name)} className={styles.image_container}>
         <img src={product.image} alt={product.image} />
       </div>
     </div>

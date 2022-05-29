@@ -24,7 +24,7 @@ const FooterSummary = ({ totalPrice }) => {
           }
         }}
       >
-        پرداخت
+        ادامه
       </Link>
     </footer>
   );

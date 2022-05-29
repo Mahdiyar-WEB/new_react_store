@@ -3,6 +3,16 @@
     height: 100vh;
     min-height: 720px;
 }
+.backTo{
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: flex-end;
+    color: #4CCDE7;
+}
 .container{
     width: 100%;
     display: flex;
@@ -15,7 +25,7 @@
 .product_container{
     border-radius: 5px;
     padding: 10px;
-    border: 1px solid rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, .2);
     width: 70%;
     display: flex;
     justify-content: flex-end;
@@ -87,7 +97,7 @@
     font-size: 1.1rem;
 }
 .side_panel{
-    border: 1px solid rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 5px;
     overflow: hidden;
     width: 30%;

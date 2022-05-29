@@ -1,5 +1,5 @@
 import styles from "./product.module.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate,Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
   useProductsActions,
@@ -27,6 +27,7 @@ const Product = () => {
   }, []);
   return (
     <main className={styles.main}>
+      <Link className={styles.backTo} to={"/"}>بازگشت به فروشگاه <HiArrowNarrowRight/></Link>
       <div className={styles.container}>
         <aside className={styles.side_panel}>
           <div className={styles.sellDetails}>
