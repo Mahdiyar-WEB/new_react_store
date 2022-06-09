@@ -134,6 +134,7 @@
         position: absolute;
         inset: 0 0 0 0;
         border: none;
+        height: calc(100vh - 68px);
         z-index: 10;
         display: none;
         width: 100%;
