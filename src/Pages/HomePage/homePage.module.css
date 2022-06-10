@@ -16,7 +16,6 @@
 .container{
     position: relative;
     max-width: 1440px;
-    min-height: 800px;
     margin: 0 auto;
     gap: 20px;
     padding: 20px;
@@ -179,6 +178,9 @@
 @media screen and (max-width:640px) {
     .not_found img{
         min-height: 230px;
+    }
+    .not_found{
+        height: 500px;
     }
     .showFilters{
         width: 35%;
