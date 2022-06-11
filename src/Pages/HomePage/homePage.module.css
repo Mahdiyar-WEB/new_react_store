@@ -145,7 +145,7 @@
         position: absolute;
         inset: 0 0 0 0;
         border: none;
-        height: calc(100vh - 120px);
+        height: calc(100vh - 70px);
         z-index: 10;
         display: none;
         width: 100%;
@@ -207,5 +207,10 @@
     .cards_container{
         grid-template-columns: repeat(1,1fr);
         padding: 20px 30px;
+    }
+}
+@media screen and (max-width:480px) {
+    .filters_container{
+        height: calc(100vh - 120px);
     }
 }
