@@ -120,6 +120,17 @@
 }
 .showShoes{
     display: none;
+    border-top: 1px solid rgba(0, 0, 0, .6);
+    width: 100%;
+    /* display: flex; */
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 @media screen and (max-width:1195px) {
     .hide{
@@ -138,7 +149,7 @@
         z-index: 10;
         display: none;
         width: 100%;
-        min-height: 470px;
+        min-height: 370px;
     }
     .size_filter_container{
         overflow-y: auto;
@@ -169,6 +180,13 @@
 }
 @media screen and (max-width:922px) {
     .showFilters{
+        width: 20%;
+        margin: 0 0 0 auto;
+        gap: 5px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 20px;
         grid-column: 1/ 2 span;
     }
     .cards_container{
@@ -178,9 +196,6 @@
 @media screen and (max-width:640px) {
     .not_found img{
         min-height: 230px;
-    }
-    .not_found{
-        height: 350px;
     }
     .showFilters{
         width: 35%;
