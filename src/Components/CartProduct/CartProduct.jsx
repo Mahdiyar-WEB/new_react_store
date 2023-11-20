@@ -1,6 +1,14 @@
 import styles from "./cartProduct.module.css";
 import { BiTrash } from "react-icons/bi";
 import {useNavigate} from 'react-router-dom';
+import running from "../../public/running-shoes.jpeg";
+import mountain from "../../public/mountain-shoes.png";
+import jordan from "../../public/jordan-shoes.jpeg";
+import vans from "../../public/vans-shoes.jpg";
+import adidas from "../../public/adidas-shoes.jpg";
+import winter from "../../public/winter-shoes.jpg";
+
+const images = [winter, adidas, vans, running, mountain, jordan];
 
 const CartProduct = ({ product, onIncrease, onDecrease }) => {
   const navigate = useNavigate();
@@ -53,10 +61,11 @@ const CartProduct = ({ product, onIncrease, onDecrease }) => {
         <div className={styles.footer_details}></div>
       </div>
       <div onClick={()=> navigateHandler(product.name)} className={styles.image_container}>
-        <img src={product.image} alt={product.image} />
+        <img src={images[product.id - 1]} alt={product.image} />
       </div>
     </div>
   );
 };
 
 export default CartProduct;
+  

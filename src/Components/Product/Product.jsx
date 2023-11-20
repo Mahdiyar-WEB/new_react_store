@@ -1,14 +1,22 @@
 import styles from "./product.module.css";
 import { useNavigate } from "react-router-dom";
+import running from "../../public/running-shoes.jpeg";
+import mountain from "../../public/mountain-shoes.png";
+import jordan from "../../public/jordan-shoes.jpeg";
+import vans from "../../public/vans-shoes.jpg";
+import adidas from "../../public/adidas-shoes.jpg";
+import winter from "../../public/winter-shoes.jpg";
 
-const Product = ({ product, onAdd, inCart,onClick }) => {
+const images = [winter, adidas, vans, running, mountain, jordan];
+
+const Product = ({ product, onAdd, inCart, onClick }) => {
   const navigate = useNavigate();
   const redirect = () => {
     navigate("cart");
   };
   return (
-    <div  className={styles.product}>
-      <img onClick={onClick} src={product.image} alt={product.name} />
+    <div className={styles.product}>
+      <img onClick={onClick} src={images[product.id - 1]} alt={product.name} />
       <div onClick={onClick} className={styles.head}>
         <p>{product.name}</p>
         <p className={product.discount > 0 ? styles.discount_price : ""}>

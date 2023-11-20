@@ -128,7 +128,9 @@
     width: 40%;
 }
 .image_container img{
-    height: 220px;
+    height: 100%;
+    width: 222px;
+    object-fit: cover;
 }
 
 @media screen and (max-width:550px) {

@@ -11,6 +11,14 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
 import { AiOutlineSafety } from "react-icons/ai";
 import Footer from "../../Components/Footer/Footer";
+import running from "../../public/running-shoes.jpeg";
+import mountain from "../../public/mountain-shoes.png";
+import jordan from "../../public/jordan-shoes.jpeg";
+import vans from "../../public/vans-shoes.jpg";
+import adidas from "../../public/adidas-shoes.jpg";
+import winter from "../../public/winter-shoes.jpg";
+
+const images = [winter, adidas, vans, running, mountain, jordan];
 
 const Product = () => {
   const navigate = useNavigate();
@@ -75,7 +83,7 @@ const Product = () => {
                     shoe.price === shoe.offPrice ? styles.endPrice : styles.off
                   } `}
                 >
-                  {shoe.price * 1000}ت
+                  {(shoe.price * 1000).toLocaleString()} ت
                 </span>
                 <span
                   style={
@@ -107,7 +115,7 @@ const Product = () => {
             </div>
           </div>
           <div className={styles.img_container}>
-            <img src={shoe.image} alt={shoe.name} />
+            <img src={images[shoe.id - 1]} alt={shoe.name} />
           </div>
         </div>
       </div>

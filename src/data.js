@@ -1,7 +1,7 @@
 export const products = [
   {
     id: "1",
-    name: "Winter body1",
+    name: "Winter shoe",
     description: [
       { support: "گارانتی مادام العمر" },
       { support: "ارسال رایگان" },
@@ -16,7 +16,7 @@ export const products = [
   },
   {
     id: "2",
-    name: "Adidas",
+    name: "Adidas shoe",
     description: [{ support: "گارانتی مادام العمر" }, { support: "اورجینال" }],
     price: 110,
     explain:"این کفش مناسب استفاده ورزشی میباشد و با استفاده ازا ن کفش میتوانید نهایت راحتی را تجربه کنید",
@@ -27,7 +27,7 @@ export const products = [
   },
   {
     id: "3",
-    name: "Vans",
+    name: "Vans shoe",
     description: [
       { support: "گارانتی مادام العمر" },
       { support: "اورجینال" },
@@ -42,7 +42,7 @@ export const products = [
   },
   {
     id: "4",
-    name: "White",
+    name: "Running shoe",
     description: [
       { support: "گارانتی مادام العمر" },
       { support: "اورجینال" },
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     id: "5",
-    name: "Croopped shoe",
+    name: "Mountain shoe",
     description: [
       { support: "گارانتی مادام العمر" },
       { support: "اورجینال" },
@@ -72,7 +72,7 @@ export const products = [
   },
   {
     id: "6",
-    name: "Blues",
+    name: "Jordan",
     description: [
       { support: "گارانتی مادام العمر" },
       { support: "اورجینال" },
