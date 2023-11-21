@@ -12,7 +12,7 @@ This repository contains the code for a modern e-commerce storefront specialized
 
 ## About The Project
 
-This new React shoe store is a full-fledged e-commerce solution that brings together a sleek design and powerful functionality to offer customers the best shopping experience. With this project, users can browse through a collection of shoes, add them to their cart, and complete their purchase with ease.
+This shoes store is a full-fledged e-commerce solution that brings together a sleek design and powerful functionality to offer customers the best shopping experience. With this project, users can browse through a collection of shoes, add them to their cart, and complete their purchase with ease.
 
 ## Technologies Used
 
