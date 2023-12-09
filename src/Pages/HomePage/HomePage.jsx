@@ -5,13 +5,13 @@ import {
   useProductsActions,
   useProducts,
 } from "../../Providers/StoreProvider/StoreProvider";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
 import Footer from "../../Components/Footer/Footer";
 import { useEffect, useState } from "react";
 import { FiArrowDown } from "react-icons/fi";
 import { BsFilterRight } from "react-icons/bs";
-import {IoIosArrowUp} from 'react-icons/io'
+import { IoIosArrowUp } from "react-icons/io";
 const shoesSizes = [
   { value: 37, text: "سایز 37" },
   { value: 38, text: "سایز 38" },
@@ -25,7 +25,7 @@ const HomePage = () => {
   const [isPrice, setIsPrice] = useState(false);
   const [size, setSize] = useState("");
   const [price, setPrice] = useState(1000000);
-  const [showFilters,setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
   const { addToast } = useToasts();
   const dispatch = useProductsActions();
   const { products } = useProducts();
@@ -86,17 +86,21 @@ const HomePage = () => {
     dispatch({ type: "addProduct", value: product });
     dispatch({ type: "totalPrice" });
   };
-  const navigateHandler = (productName)=>{
+  const navigateHandler = (productName) => {
     const name = productName.toLowerCase().split(" ").join("-");
     navigate(`/product/${name}`);
-  }
+  };
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={loading ? styles.loading : styles.hideLoading}>
           <img src={"https://svgshare.com/i/gav.svg"} alt="loading" />
         </div>
-        <section className={`${styles.filters_container} ${showFilters && styles.show}`}>
+        <section
+          className={`${styles.filters_container} ${
+            showFilters && styles.show
+          }`}
+        >
           <div className={styles.filter_head}>
             <p>فیلترها</p>
             <button onClick={() => removeFilters()}>حذف فیلترها</button>
@@ -153,24 +157,32 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          {showFilters && <div onClick={()=> setShowFilters(false)} className={styles.showShoes}>
+          {showFilters && (
+            <div
+              onClick={() => setShowFilters(false)}
+              className={styles.showShoes}
+            >
               <p>مشاهده {shoes.products.length} کالا</p>
-              <IoIosArrowUp/>
-            </div>}
+              <IoIosArrowUp />
+            </div>
+          )}
         </section>
         <section
           className={`${styles.cards_container} ${
             shoes.products.length === 0 && styles.not_found
           } ${showFilters && styles.hide}`}
         >
-          <div onClick={()=> setShowFilters(!showFilters)} className={styles.showFilters}>
+          <div
+            onClick={() => setShowFilters(!showFilters)}
+            className={styles.showFilters}
+          >
             <strong>فیلترها</strong>
             <BsFilterRight />
           </div>
           {shoes.products.length === 0 && (
             <div>
               <img
-                src={require("./../../assets/images/not-found.png")}
+                src={require("../../public/not-found.png")}
                 alt="not-found"
               />
               <h3>!محصول مورد نظر شما یافت نشد</h3>
@@ -180,7 +192,7 @@ const HomePage = () => {
             return (
               <Product
                 onAdd={() => addProductHandler(product)}
-                onClick={()=> navigateHandler(product.name)}
+                onClick={() => navigateHandler(product.name)}
                 product={product}
                 key={product.id}
                 inCart={checkInCart(product.id, products)}

@@ -46,7 +46,7 @@ const Cart = () => {
         <div className={styles.noProduct}>
           <img
             className={styles.noProductImg}
-            src={require("../../assets/images/noProduct.png")}
+            src={require("../../public/noProduct.png")}
             alt="no product"
           />
           <h4>هیچ محصولی در سبد خرید شما نیست</h4>

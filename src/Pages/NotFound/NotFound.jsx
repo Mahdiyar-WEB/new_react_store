@@ -4,7 +4,7 @@ const NotFound = () => {
   return (
     <div className={styles.container}>
       <img
-        src={require("../../assets/images/notFoundImage.png")}
+        src={require("../../public/notFoundImage.png")}
         alt="notFound"
       />
       <h4>صفحه مورد نظر پیدا نشد</h4>

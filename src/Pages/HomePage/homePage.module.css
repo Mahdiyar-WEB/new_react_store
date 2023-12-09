@@ -147,7 +147,7 @@
     .filters_container{
         background-color: #fff;
         border: none;
-        height: calc(100vh - 70px);
+        height: calc(90dvh - 70px);
         z-index: 10;
         display: none;
         width: 90vw !important;
